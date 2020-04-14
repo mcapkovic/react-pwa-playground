@@ -8,6 +8,8 @@ import Notes from "./components/Notes";
 import { APIProvider } from "./api/API-context";
 import APIStatus from "./components/APIStatus";
 
+console.log('App version: ' + process.env.REACT_APP_VERSION)
+
 const tabs = ["login", "register", "notes", "newNote"];
 
 function App() {
