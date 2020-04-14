@@ -3,6 +3,19 @@
 
 }
 
+.tab-strip__tab{
+  padding: 0.7em 2em;
+  border-color: #e8e8e8;;
+  outline:none;
+  background: #e8e8e8;
+}
+
+.tab-strip__tab--active {
+  background: #222222;
+  color: white;
+}
+
+
 body{
   background-color: #222;
   color: white;;

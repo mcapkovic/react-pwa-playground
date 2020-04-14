@@ -17,20 +17,26 @@ function App() {
       <APIProvider>
         <APIStatus />
 
-        <User />
-        <br />
 
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => {
-              setActiveTab(tab);
-            }}
-          >
-            {tab}
-          </button>
-        ))}
+        <User />
         <hr />
+
+        <div className="tab-strip">
+          {tabs.map((tab) => (
+            <button
+              className={`tab-strip__tab ${
+                activeTab === tab ? "tab-strip__tab--active" : ""
+              }`}
+              key={tab}
+              onClick={() => {
+                setActiveTab(tab);
+              }}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
 
         <div style={{ height: "300px" }}>
           {activeTab === "register" && <Register />}

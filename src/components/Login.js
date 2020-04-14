@@ -11,7 +11,7 @@ function Login(props) {
   };
   return (
     <div>
-      <h1>Login</h1>
+      <h1>login</h1>
       email:
       <input value={email} onChange={(e) => setEmail(e.target.value)} />
       <br />
