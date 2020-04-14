@@ -145,6 +145,7 @@ export function useGetNotes() {
       console.log("error message - " + error.message);
       console.log("error code - " + error.statusCode);
       dispatch({ type: "error", error: error.message });
+      return null;
     };
 
     const queryBuilder = Backendless.DataQueryBuilder.create().setPageSize( 50 );
@@ -152,6 +153,6 @@ export function useGetNotes() {
     return Backendless.Data.of("TestTable")
     .find( queryBuilder )
       .then( onSuccess)
-      .catch( (error) => null);
+      .catch( onError);
   };
 }
