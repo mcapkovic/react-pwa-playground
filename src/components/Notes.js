@@ -15,7 +15,7 @@ function Notes(props) {
       <h1>notes</h1>
 
       {data.length > 0 ? (
-        <div style={{ height: "300px", overflow: "scroll" }}>
+        <div style={{ height: "300px", overflow: "auto" }}>
           <table style={{ margin: "auto"}}>
             <thead>
               <tr>
