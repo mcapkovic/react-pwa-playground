@@ -1,12 +1,12 @@
 .App {
   text-align: center;
-
 }
 
-.tab-strip__tab{
+.tab-strip__tab {
   padding: 0.7em 2em;
-  border-color: #e8e8e8;;
-  outline:none;
+  margin: 0;
+  border: solid 1px #e8e8e8;
+  outline: none;
   background: #e8e8e8;
 }
 
@@ -15,16 +15,17 @@
   color: white;
 }
 
-
-body{
+body {
   background-color: #222;
-  color: white;;
+  color: white;
 }
 table {
   border-collapse: collapse;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid white;
 }
 
@@ -33,7 +34,7 @@ table, th, td {
 }
 
 .backendless-logo {
-  height: 55px;
+  height: 50px;
 }
 
 .App-header {
@@ -41,6 +42,7 @@ table, th, td {
   height: 150px;
   padding: 20px;
   color: white;
+  overflow: scroll;
 }
 
 .App-intro {
@@ -48,6 +50,10 @@ table, th, td {
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
