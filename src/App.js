@@ -8,10 +8,10 @@ import Notes from "./components/Notes";
 import { APIProvider } from "./api/API-context";
 import APIStatus from "./components/APIStatus";
 
-const tabs = ["login", "register", "note", "newNote"];
+const tabs = ["login", "register", "notes", "newNote"];
 
 function App() {
-  const [activeTab, setActiveTab] = useState("note");
+  const [activeTab, setActiveTab] = useState("newNote");
   return (
     <div className="App">
       <APIProvider>
@@ -42,7 +42,7 @@ function App() {
           {activeTab === "register" && <Register />}
           {activeTab === "login" && <Login />}
           {activeTab === "newNote" && <NewNote />}
-          {activeTab === "note" && <Notes />}
+          {activeTab === "notes" && <Notes />}
         </div>
       </APIProvider>
     </div>
