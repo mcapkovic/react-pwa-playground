@@ -7,18 +7,15 @@ function User(props) {
   const getUser = useGetUser();
   const { user } = useAPIState();
 
-  // const [user, setUser ] = useState(null);
+  const email = (user && user.email) || "not logged";
 
   useEffect(() => {
     getUser();
-    // getUser().then((response) =>
-    //   saveUser({ type: "user", message: "user loaded", user: response })
-    // );
   }, []);
 
   return (
     <div>
-      user: {user && user.email} <Logout />
+      logged user: {email} <Logout />
     </div>
   );
 }
