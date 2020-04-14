@@ -1,8 +1,9 @@
 import Backendless from "backendless";
 import { useAPIDispatch } from "./API-context";
 
-const APP_ID = "8EBB991D-E42E-1E48-FF24-20C8179C7100";
-const API_KEY = "2B788E19-33F5-4A25-BB0C-5BC213B08BAE";
+const APP_ID = process.env.REACT_APP_ID;
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 Backendless.serverURL = "https://api.backendless.com";
 Backendless.initApp(APP_ID, API_KEY);
 
