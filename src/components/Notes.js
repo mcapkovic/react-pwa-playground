@@ -6,7 +6,7 @@ function Notes(props) {
   const getNotes = useGetNotes();
 
   useEffect(() => {
-    getNotes().then((response) => setData(response));
+    getNotes().then((response) => setData(response || []));
   }, []);
 
   // console.log(data);
