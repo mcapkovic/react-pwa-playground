@@ -43,11 +43,11 @@ export function useSaveData() {
   return (data) => {
     dispatch({ type: "start-loading" });
 
-    Backendless.Data.of("TestTable")
+    Backendless.Data.of("Person")
       .save(data)
       .then((obj) => {
         const message =
-          "Check 'TestTable' in Backendless Console." +
+          "Check 'Person' in Backendless Console." +
           `ObjectId = ${obj.objectId}`;
 
         dispatch({ type: "success", message });
@@ -151,7 +151,7 @@ export function useGetNotes() {
 
     const queryBuilder = Backendless.DataQueryBuilder.create().setPageSize( 50 );
 
-    return Backendless.Data.of("TestTable")
+    return Backendless.Data.of("Person")
     .find( queryBuilder )
       .then( onSuccess)
       .catch( onError);
